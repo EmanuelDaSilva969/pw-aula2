@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Evento onKeyDown</title>
+</head>
+
+<body>
+    <main>
+        <h1>Evento: onKeyDown</h1>
+
+        <h2>Descrição</h2>
+        <p>O evento onKeyDown é acionado quando uma tecla é pressionada no teclado enquanto o foco está em um elemento
+            HTML. Esse evento é útil para capturar entradas de teclado do usuário e executar ações com base nessas
+            entradas. É semelhante ao evento onKeyPress, mas com a diferença de que também é acionado quando uma tecla
+            não é suportada pela entrada de caracteres.
+        </p>
+
+        <h2>Elementos envolvidos:</h2>
+        <ul>
+            <li>Qualquer elemento HTML que possa receber o foco pode ser usado para acionar o evento onKeyDown.
+                Normalmente, é usado em elementos como caixas de texto e áreas de texto, mas pode ser usado em qualquer
+                elemento HTML com a propriedade tabIndex definida como true.
+            </li>
+            <li>É possível acessar o elemento que disparou o evento usando a propriedade "this" dentro da função de
+                resposta.
+            </li>
+        </ul>
+
+        <h2>Exemplo Funcional:</h2>
+
+        <input type="text" placeholder="Digite seu email">
+
+        <h2>Codigo do exemplo Funcional</h2>
+
+        <p>HTML:</p>
+        <code>
+            &lt;input type="text"/&gt;
+        </code>
+        <p>JS:</p>
+        <code>
+            document.querySelector('input').addEventListener('keydown', (e) => { <br>
+               &emsp;&emsp;  alert(`A tecla ${e.key} foi pressionada`);
+                <br>
+            });
+        </code>
+
+    </main>
+
+    <script>
+        document.querySelector('input').addEventListener('keydown', (e) => {
+            alert(`A tecla ${e.key} foi pressionada`);
+        });
+    </script>
+</body>
+
+</html>

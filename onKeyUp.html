@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Evento onKeyUp</title>
+</head>
+
+<body>
+    <main>
+        <h1>Evento: onKeyUp</h1>
+
+        <h2>Descrição</h2>
+        <p>Descrição:
+
+            O evento onKeyUp é disparado quando uma tecla é solta após ter sido pressionada. Esse evento é comumente
+            usado para implementar interações baseadas em teclado, como ativar uma ação quando o usuário pressiona uma
+            determinada tecla. O evento é disparado no elemento que está com o foco na página, ou seja, aquele que está
+            pronto para receber input do usuário.
+        </p>
+
+        <h2>Elementos envolvidos:</h2>
+        <ul>
+            <li>Qualquer elemento HTML pode ser usado para receber o evento onKeyUp, desde que tenha o foco na página. Para receber o evento, é necessário adicionar um listener para o evento onKeyUp no elemento desejado.
+
+
+            </li>
+            <li>É possível acessar o elemento que disparou o evento usando a propriedade "this" dentro da função de
+                resposta.
+            </li>
+        </ul>
+
+        <h2>Exemplo Funcional:</h2>
+
+        <input type="text" placeholder="Digite seu email">
+
+        <h2>Codigo do exemplo Funcional</h2>
+
+        <p>HTML:</p>
+        <code>
+            &lt;input type="text"/&gt;
+        </code>
+        <p>JS:</p>
+        <code>
+            document.querySelector('input').addEventListener('keyup', (e) => { <br>
+               &emsp;&emsp;  alert(`A tecla ${e.key} foi solta`);
+                <br>
+            });
+        </code>
+
+    </main>
+
+    <script>
+        document.querySelector('input').addEventListener('keyup', (e) => {
+            alert(`A tecla ${e.key} foi solta`);
+        });
+    </script>
+</body>
+
+</html>

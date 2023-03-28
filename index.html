@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Eventos em JavaScript</title>
+</head>
+
+<body>
+    <main>
+        <h1>Eventos em JavaScript</h1>
+
+        <p>Descubra como utilizar os eventos em JavaScript para criar interatividade e melhorar a experiência
+            do usuário
+            em páginas web</p>
+
+        <h2>O que são eventos em JavaScript?</h2>
+        <p>
+            Eventos em JavaScript são ações que ocorrem dentro de um documento HTML e que podem ser detectadas e
+            respondidas por meio de código JavaScript. Eles permitem que você crie interações dinâmicas e responsivas
+            com o usuário, como clicar em um botão, mover o mouse sobre um elemento ou digitar em um campo de texto.
+        </p>
+        <p>
+            Existe uma infinidade de eventos definidos para uso em JavaScript, porem nesta pesquisa trataremos
+            especifcamente dos eventos abaixo:
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Evento</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>onClick</td>
+                    <td>Ocorre quando o usuário clica em um elemento.</td>
+                </tr>
+                <tr>
+                    <td>onDblClick</td>
+                    <td>Ocorre quando o usuário clica duas vezes em um elemento.</td>
+                </tr>
+                <tr>
+                    <td>onChange</td>
+                    <td>Ocorre quando o valor de um elemento é alterado pelo usuário, geralmente usado em campos de
+                        formulário como caixas de seleção, botões de rádio e campos de texto.</td>
+                </tr>
+                <tr>
+                    <td>onInput</td>
+                    <td>Ocorre quando o valor de um elemento é alterado pelo usuário ou programaticamente, semelhante ao
+                        evento onChange, mas dispara com mais frequência e funciona em outros elementos, como elementos
+                        div e span.</td>
+                </tr>
+                <tr>
+                    <td>onLoad</td>
+                    <td>Ocorre quando um elemento, como uma imagem ou uma página, é completamente carregado.</td>
+                </tr>
+                <tr>
+                    <td>onMouseOver</td>
+                    <td>Ocorre quando o ponteiro do mouse é movido sobre um elemento.</td>
+                </tr>
+                <tr>
+                    <td>onMouseOut</td>
+                    <td>Ocorre quando o ponteiro do mouse é movido para fora de um elemento.</td>
+                </tr>
+                <tr>
+                    <td>onKeyDown</td>
+                    <td>Ocorre quando uma tecla é pressionada enquanto o foco está em um elemento.</td>
+                </tr>
+                <tr>
+                    <td>onKeyUp</td>
+                    <td>Ocorre quando uma tecla é liberada depois de ter sido pressionada enquanto o foco está em um
+                        elemento.</td>
+                </tr>
+                <tr>
+                    <td>onFocus</td>
+                    <td>Ocorre quando um elemento recebe o foco, geralmente como resultado de um usuário clicando em um
+                        elemento ou navegando para ele usando a tecla Tab. É frequentemente usado para controlar a
+                        aparência do elemento quando ele recebe o foco.</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h2>Como sao representados?</h2>
+        <p>
+            Os eventos são representados no DOM (Modelo de Objeto de Documento) por meio de objetos Event, que contêm
+            informações sobre o tipo de evento, o alvo do evento (ou seja, o elemento que disparou o evento) e outras
+            informações relevantes. O DOM é uma representação em árvore dos elementos HTML em uma página, que pode ser
+            manipulada por meio de código JavaScript.
+        </p>
+        <h2>Como lidar com eventos?</h2>
+        <p>
+            Para responder a um evento, é possível criar uma função em JavaScript que será chamada sempre que o evento
+            for disparado. Existem duas maneiras principais de se fazer isso em JavaScript: usando a propriedade "on" do
+            elemento HTML (como onclick, onmouseover, etc.) ou usando a função addEventListener.
+        </p>
+        <p>
+            A função addEventListener é considerada uma prática recomendada para lidar com eventos em JavaScript, pois
+            permite adicionar vários ouvintes para um evento em um único elemento, garantindo que os ouvintes sejam
+            chamados na ordem em que foram adicionados. Além disso, a função addEventListener também permite remover
+            ouvintes para um evento específico, o que pode ser útil em determinadas situações.
+        </p>
+        <p>
+            A sintaxe básica da função addEventListener é a seguinte:
+        </p>
+        <code>
+            elemento.addEventListener(evento, função, useCapture);
+        </code>
+        <p>
+            Onde "elemento" é o elemento HTML ao qual você deseja adicionar um ouvinte de evento, "evento" é uma string
+            que indica o tipo de evento que você deseja detectar (por exemplo, "click", "mouseover", etc.), "função" é a
+            função JavaScript que será chamada sempre que o evento for disparado e "useCapture" é um valor booleano
+            opcional que indica se o ouvinte deve ser chamado durante a fase de captura do evento (quando o evento é
+            propagado para o elemento pai) ou durante a fase de bubbling (quando o evento é propagado para o elemento
+            filho).
+        </p>
+        <h2>Exemplos</h2>
+        <ul>
+            <li><a href="./onClick.html" target="_blank" rel="next">onClick</a></li>
+            <li><a href="./onDblClick.html" target="_blank" rel="next">onDblClick</a></li>
+            <li><a href="./onChange.html" target="_blank" rel="next">onChange</a></li>
+            <li><a href="./onInput.html" target="_blank" rel="next">onInput</a></li>
+            <li><a href="./onLoad.html" target="_blank" rel="next">onLoad</a></li>
+            <li><a href="./onMouseOver.html" target="_blank" rel="next">onMouseOver</a></li>
+            <li><a href="./onMouseOut.html" target="_blank" rel="next">onMouseOut</a></li>
+            <li><a href="./onKeyDown.html" target="_blank" rel="next">onKeyDown</a></li>
+            <li><a href="./onKeyUp.html" target="_blank" rel="next">onKeyUp</a></li>
+            <li><a href="./onFocus.html" target="_blank" rel="next">onFocus</a></li>
+        </ul>
+        <h2>Conclusão</h2>
+        <p>
+            Em resumo, eventos em JavaScript são ações que ocorrem dentro de um documento HTML e que podem ser
+            detectadas e respondidas por meio de código JavaScript. Eles são representados no DOM por meio de objetos
+            Event e podem ser tratados usando a propriedade "on" do elemento HTML ou a função addEventListener, que é
+            considerada uma prática recomendada para lidar com eventos em JavaScript.
+        </p>
+
+    </main>
+    <footer>
+        &copy; WiliamMelo 2023
+    </footer>
+</body>
+
+</html>

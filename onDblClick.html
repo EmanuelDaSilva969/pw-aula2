@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Evento dblClick</title>
+</head>
+
+<body>
+    <main>
+        <h1>Evento: dblClick</h1>
+
+        <h2>Descrição</h2>
+        <p>O evento dblClick é disparado quando o usuário clica duas vezes em um elemento HTML em um curto período de
+            tempo. É semelhante ao evento onClick, mas com a diferença de que ocorre com um duplo clique em vez de um
+            único clique. Esse evento é útil para criar interações com elementos que requerem ações mais precisas e
+            específicas, como selecionar um item em uma lista ou editar um campo de texto. Ao utilizar o evento
+            dblClick, é possível criar experiências de usuário mais intuitivas e eficientes em sua aplicação ou site.
+        </p>
+
+        <h2>Elementos envolvidos:</h2>
+        <ul>
+            <li>Qualquer elemento HTML pode ser clicado para disparar o evento dblClick.
+            </li>
+            <li>É possível acessar o elemento que disparou o evento usando a propriedade "this" dentro da função de
+                resposta.
+            </li>
+        </ul>
+
+        <h2>Exemplo Funcional:</h2>
+
+        <button id="myButton">Clique aqui</button>
+
+        <h2>Codigo do exemplo Funcional</h2>
+
+        <p>HTML:</p>
+        <code>
+            &lt;button id="myButton"&gt;Clique aqui&lt;/button&gt;
+        </code>
+
+        <p>JS:</p>
+        <code>
+            document.querySelector('#myButton').addEventListener('dblclick', () => { <br>
+               &emsp;&emsp; alert('O botão foi clicado duas vezes seguidas em um curto periodo de tempo!')
+            <br>
+            });
+        </code>
+
+    </main>
+
+    <script>
+        document.querySelector('#myButton').addEventListener('dblclick', () => {
+            alert('O botão foi clicado duas vezes seguidas em um curto periodo de tempo!')
+        });
+    </script>
+
+</body>
+
+</html>

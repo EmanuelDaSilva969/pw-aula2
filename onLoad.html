@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Evento onLoad</title>
+</head>
+
+<body onLoad="alert('A pagina foi carregada completamente!')">
+    <main>
+        <h1>Evento: onLoad</h1>
+
+        <h2>Descrição</h2>
+        <p>O evento onLoad é acionado quando um elemento da página ou a página inteira é carregada. Isso significa que o
+            evento é acionado uma vez que todos os recursos (como imagens e arquivos CSS) tenham sido carregados
+            completamente.Geralmente, o evento é usado para executar ações que dependem do carregamento completo da
+            página, como inicializar plugins, carregar dados externos ou definir o foco em um elemento específico.
+        </p>
+
+        <h2>Elementos envolvidos:</h2>
+        <ul>
+            <li>Qualquer elemento da página pode disparar o evento onLoad, incluindo a própria página.
+            </li>
+            <li>É possível acessar o elemento que disparou o evento usando a propriedade "this" dentro da função de
+                resposta.
+            </li>
+        </ul>
+
+        <h2>Exemplo Funcional:</h2>
+
+        <p>Esta pagina é o exemplo funcional!</p>
+
+        <h2>Codigo do exemplo Funcional</h2>
+
+        <p>HTML:</p>
+        <code>
+            &lt;body onLoad="alert('A pagina foi carregada completamente!')"&gt;
+            <br>
+           &emsp;&emsp; CONTEUDO DA PÀGINA...
+            <br>
+           &lt;/body&gt;
+
+        </code>
+
+    </main>
+
+</body>
+
+</html>

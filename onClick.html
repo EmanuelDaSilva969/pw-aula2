@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Evento onClick</title>
+</head>
+
+<body>
+    <main>
+        <h1>Evento: onClick</h1>
+
+        <h2>Descrição</h2>
+        <p>O evento onclick é disparado quando o usuário clica em um elemento HTML. É uma forma comum de criar
+            interações com botões, links e outros elementos clicáveis.</p>
+
+        <h2>Elementos envolvidos:</h2>
+        <ul>
+            <li>Qualquer elemento HTML pode ser clicado para disparar o evento onclick.
+            </li>
+            <li>É possível acessar o elemento que disparou o evento usando a propriedade "this" dentro da função de
+                resposta.
+            </li>
+        </ul>
+
+        <h2>Exemplo Funcional:</h2>
+
+        <button id="myButton">Clique aqui</button>
+
+        <h2>Codigo do exemplo Funcional</h2>
+
+        <p>HTML:</p>
+        <code>
+            &lt;button id="myButton"&gt;Clique aqui&lt;/button&gt;
+        </code>
+
+        <p>JS:</p>
+        <code>
+            document.querySelector('#myButton').addEventListener('click', () => { <br>
+               &emsp;&emsp; alert('O botão foi clicado!')<br>
+            });
+        </code>
+
+    </main>
+
+    <script>
+        document.querySelector('#myButton').addEventListener('click', () => {
+            alert('O botão foi clicado!')
+        });
+    </script>
+
+</body>
+
+</html>

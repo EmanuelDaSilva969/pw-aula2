@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Evento onChange</title>
+</head>
+
+<body>
+    <main>
+        <h1>Evento: onChange</h1>
+
+        <h2>Descrição</h2>
+        <p>O evento onChange é disparado quando o valor de um elemento HTML é alterado, geralmente em um formulário. Ele
+            é comumente usado em elementos de formulário como input, select e textarea.
+
+            Por exemplo, quando o usuário altera o valor de um input de texto, seleciona uma opção diferente em um
+            select ou altera o texto em um textarea, o evento onChange é acionado. Isso permite que você execute ações
+            com base na alteração do valor do elemento.
+        </p>
+
+        <h2>Elementos envolvidos:</h2>
+        <ul>
+            <li>Os elementos envolvidos no evento onChange são aqueles que possuem um estado mutável, como campos de
+                formulário, caixas de seleção, botões de rádio e outros elementos interativos
+            </li>
+            <li>É possível acessar o elemento que disparou o evento usando a propriedade "this" dentro da função de
+                resposta.
+            </li>
+        </ul>
+
+        <h2>Exemplo Funcional:</h2>
+
+        <form>
+            <label for="cidade">Escolha uma cidade:</label>
+            <select id="cidade">
+                <option disabled selected>Selecione uma cidade</option>
+                <option value="São Paulo">São Paulo </option>
+                <option value="Rio de Janeiro">Rio de Janeiro </option>
+                <option value="Brasília">Brasília </option>
+                <option value="Salvador">Salvador </option>
+                <option value="Fortaleza">Fortaleza </option>
+            </select>
+        </form>
+
+        <h2>Codigo do exemplo Funcional</h2>
+
+        <p>HTML:</p>
+        <code>
+            &lt;form&gt;
+            <br>
+            &emsp;&emsp; &lt;label for="cidade"&gt;Escolha uma cidade:&lt;/label&gt;
+            <br>
+            &emsp;&emsp; &lt;select id="cidade"&gt;
+            <br>
+            &emsp;&emsp;&emsp;   
+            &lt;option disabled selected>Selecione uma cidade&lt;/option&gt;
+            <br>
+            &emsp;&emsp;&emsp; &lt;option value="São Paulo">São Paulo &lt;/option&gt;
+            <br>
+            &emsp;&emsp;&emsp; &lt;option value="Rio de Janeiro">Rio de Janeiro &lt;/option&gt;
+            <br>
+            &emsp;&emsp;&emsp; &lt;option value="Brasília">Brasília &lt;/option&gt;
+            <br>
+            &emsp;&emsp;&emsp; &lt;option value="Salvador">Salvador &lt;/option&gt;
+            <br>
+            &emsp;&emsp;&emsp; &lt;option value="Fortaleza">Fortaleza &lt;/option&gt;
+            <br>
+            &emsp;&emsp; &lt;/select&gt;
+            <br>
+            &lt;/form&gt;
+
+        </code>
+
+        <p>JS:</p>
+        <code>
+            document.querySelector('select').addEventListener('change', (e) => { <br>
+                &emsp;&emsp; alert(`Voce selecionou a cidade ${e.target.value}`) <br>
+            }); 
+        </code>
+
+    </main>
+
+    <script>
+        document.querySelector('select').addEventListener('change', (e) => {
+            alert(`Voce selecionou a cidade ${e.target.value}`)
+        });
+    </script>
+
+</body>
+
+</html>

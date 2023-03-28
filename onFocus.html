@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Evento onFocus</title>
+</head>
+
+<body>
+    <main>
+        <h1>Evento: onFocus</h1>
+
+        <h2>Descrição</h2>
+        <p>Descrição:
+            O evento onFocus é acionado quando um elemento HTML recebe o foco, ou seja, quando o usuário seleciona ou
+            ativa o elemento para interagir com ele. Esse evento é útil para realizar ações específicas quando um
+            elemento recebe o foco, como alterar a cor de fundo ou exibir informações adicionais.
+        </p>
+
+        <h2>Elementos envolvidos:</h2>
+        <ul>
+            <li>Qualquer elemento HTML pode receber o foco e acionar o evento onFocus. É possível utilizar o evento em
+                elementos como inputs, botões e links para melhorar a experiência do usuário ao navegar pelo site ou
+                aplicação.
+            </li>
+            <li>É possível acessar o elemento que disparou o evento usando a propriedade "this" dentro da função de
+                resposta.
+            </li>
+        </ul>
+
+        <h2>Exemplo Funcional:</h2>
+
+        <input type="text" placeholder="Digite seu email" autocomplete="none">
+
+        <p id="demo"></p>
+
+        <h2>Codigo do exemplo Funcional</h2>
+
+        <p>HTML:</p>
+        <code>
+            &lt;input type="text" placeholder="Digite seu email" autocomplete="none"/&gt;
+            <br>
+            <br>
+            &lt;p id="demo"&gt;&lt;/p&gt;
+        </code>
+        <p>JS:</p>
+        <code>
+            document.querySelector('input').addEventListener('focus', (e) => { <br>
+                &emsp;&emsp; document.querySelector('#demo').textContent = "O input recebeu o foco";
+                <br>
+            });
+            <br>
+            document.querySelector('input').addEventListener('blur', (e) => {<br>
+                &emsp;&emsp; document.querySelector('#demo').textContent = "O input perdeu o foco";
+                <br>
+            });
+        </code>
+
+    </main>
+
+    <script>
+        document.querySelector('input').addEventListener('focus', (e) => {
+            document.querySelector('#demo').textContent = "O input recebeu o foco";
+        });
+        document.querySelector('input').addEventListener('blur', (e) => {
+            document.querySelector('#demo').textContent = "O input perdeu o foco";
+        });
+    </script>
+</body>
+
+</html>
